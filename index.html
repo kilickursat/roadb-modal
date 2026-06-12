@@ -4,6 +4,12 @@
   <meta charset="utf-8">
   <title>Road B: The Other Screen — Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Road B: The Other Screen demo video for the Build Small Hackathon.">
+  <meta property="og:title" content="Road B: The Other Screen — Demo">
+  <meta property="og:description" content="Talk to the fictional self who chose differently.">
+  <meta property="og:type" content="website">
+
   <style>
     :root {
       --bg: #07040f;
@@ -79,7 +85,7 @@
       box-shadow: 0 32px 90px rgba(0,0,0,.45);
     }
 
-    video, iframe {
+    video {
       width: 100%;
       aspect-ratio: 16 / 9;
       border: 0;
@@ -118,9 +124,17 @@
       margin-top: 26px;
       color: #7a6f93;
       font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
   <main>
     <div class="badge">Build Small Hackathon · Road B</div>
@@ -137,33 +151,28 @@
     </p>
 
     <div class="video-shell">
-      <!-- Option A: GitHub Release MP4 asset -->
-      <video controls poster="">
-        <source src="PASTE_YOUR_MP4_RELEASE_ASSET_URL_HERE" type="video/mp4">
+      <video controls playsinline preload="metadata">
+        <source src="./assets/roadb-demo.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-
-      <!-- Option B: YouTube embed instead. Replace the whole video tag above with:
-      <iframe
-        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-        title="Road B demo video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-      -->
     </div>
 
     <div class="links">
       <a class="button" href="https://huggingface.co/spaces/build-small-hackathon/roadb-other-screen" target="_blank" rel="noopener">
         Open the Hugging Face Space
       </a>
+
       <a class="button ghost" href="PASTE_YOUR_SOCIAL_POST_LINK_HERE" target="_blank" rel="noopener">
         Social post
       </a>
     </div>
 
     <div class="meta">
-      Built with Gradio, Qwen3.5-9B GGUF, llama.cpp, and Modal GPU.
+      Built with Gradio, Qwen3.5-9B GGUF Q4_K_M, llama.cpp, and Modal GPU.
+    </div>
+
+    <div class="note">
+      Demo video for Road B: The Other Screen.
     </div>
   </main>
 </body>
